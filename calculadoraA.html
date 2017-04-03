@@ -8,12 +8,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
     <!-- Estilos -->
-    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-    <!-- <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
-    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
-    <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css"> -->
     <link rel="stylesheet" href="css/global.css">
 
     <!-- Titulo -->
@@ -21,31 +16,127 @@
 
   </head>
   <body>
-    <div data-role="header">
-      <div class="ui-grid-b">
-        <div class="ui-block-a">
-          <img src="img/logo2.jpg" alt="logo">
+
+    <div id="pintura" data-role="page">
+
+      <div data-role="header">
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <img src="img/logo2.jpg" alt="logo">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="ui-grid-solo mLados">
-      <div>
-        <a href="calPintura.html"><button class="ui-btn ui-icon-star ui-btn-icon-right ui-shadow">Calcular Pintura</button></a>
+      <div class="ui-grid-solo mLados" date-role="ui-content">
+
+        <form class="formus" action="calculos/calpintura.php" method="post">
+
+          <div>
+            <label for="superficie">Superficie a pintar (M2):</label>
+            <input type="text" name="superficie" id="superficie">
+          </div>
+
+          <div>
+            <label for="rendimiento">Rendimiento de la pintura:</label>
+            <input type="text" name="rendimiento" id="rendimiento">
+          </div>
+
+          <div>
+            <label for="manos">Manos de pintura:</label>
+            <input type="text" name="manos" id="manos">
+          </div>
+
+          <div>
+            <input type="reset" class="ui-btn" name="reset" value="Borrar">
+          </div>
+
+        </form>
+
+        <div id="display" class="ui-grid-a"></div>
+
+        <div>
+          <a href="calculadoraA.html"><button class="ui-btn ui-icon-back ui-btn-icon-right ui-shadow">Volver</button></a>
+        </div>
+
+      </div>
+    </div> <!-- End Page Pintura -->
+
+    <div id="papel" data-role="page">
+      <div data-role="header">
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <img src="img/logo2.jpg" alt="logo">
+          </div>
+        </div>
       </div>
 
-      <div>
-        <a href="calPapel.html"><button class="ui-btn ui-icon-shop ui-btn-icon-right ui-shadow">Calcular Papel</button></a>
+      <div class="ui-grid-solo mLados" data-role="ui-content">
+
+        <form class="formus" action="" method="post">
+
+          <div>
+            <label for="pancho">Ancho de la pared (m):</label>
+            <input type="text" name="pancho" id="pancho">
+          </div>
+
+          <div>
+            <label for="palto">Alto de la pared (m):</label>
+            <input type="text" name="palto" id="palto">
+          </div>
+
+          <div>
+            <input type="reset" class="ui-btn" name="reset" value="Borrar">
+          </div>
+
+
+        </form>
+
+        <div id="display" class="ui-grid-a"></div>
+
+        <div>
+          <a href="calculadoraA.html"><button class="ui-btn ui-icon-back ui-btn-icon-right ui-shadow">Volver</button></a>
+        </div>
+
+      </div>
+    </div> <!-- End Page Papel -->
+
+    <div id="suelo" data-role="page">
+      <div data-role="header">
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <img src="img/logo2.jpg" alt="logo">
+          </div>
+        </div>
       </div>
 
-      <div>
-        <a href="calSuelo.html"><button class="ui-btn ui-icon-heart ui-btn-icon-right ui-shadow">Calcular Suelo</button></a>
-      </div>
+      <div class="ui-grid-solo mLados">
 
-      <div>
-        <a href="index.html"><button class="ui-btn ui-icon-back ui-btn-icon-right ui-shadow">Volver</button></a>
+        <form class="formus" action="" method="post">
+
+          <div>
+            <label for="sancho">Ancho de la superficie (M2):</label>
+            <input type="text" name="sancho" id="sancho">
+          </div>
+
+          <div>
+            <label for="salto">Alto de la superficie (M2):</label>
+            <input type="text" name="salto" id="salto">
+          </div>
+
+          <div>
+            <input type="reset" class="ui-btn" name="reset" value="Borrar">
+          </div>
+
+        </form>
+
+        <div id="display" class="ui-grid-a"></div>
+
+        <div>
+          <a href="calculadoraA.html"><button class="ui-btn ui-icon-back ui-btn-icon-right ui-shadow">Volver</button></a>
+        </div>
+
       </div>
-    </div>
+    </div> <!-- End Page Suelo -->
 
     <!-- JS -->
     <script type="text/javascript" src="cordova.js"></script>
